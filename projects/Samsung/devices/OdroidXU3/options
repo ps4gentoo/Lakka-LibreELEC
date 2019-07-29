@@ -21,7 +21,7 @@
     UBOOT_VERSION="default"
 
   # Configuration for u-boot
-    UBOOT_CONFIG="odroid-xu3_defconfig"
+    UBOOT_CONFIG="odroid-xu3_config"
 
   # Target Configfile for u-boot
     UBOOT_CONFIGFILE="boot.ini"

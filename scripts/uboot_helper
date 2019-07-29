@@ -68,6 +68,9 @@ devices = {
     },
     'TinkerBoard' : { 'rk3288' : { 'dtb' : 'rk3288-miniarm.dtb', 'config' : 'tinker-rk3288_config' }, },
   },
+  'Samsung' : {
+      'OdroidXU3' : { 'exynos5422' : { 'dtb' : 'exynos5422-odroidxu3.dtb', 'config' : 'odroid-xu3_config' }, },
+  },
 }
 
 def usage():

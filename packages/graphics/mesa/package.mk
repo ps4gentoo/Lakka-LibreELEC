@@ -47,7 +47,7 @@ if [ "$DISTRO" = "Lakka" ]; then
   VAAPI_SUPPORT=no
 fi
 
-if [ "$PROJECT" = "OdroidXU3" ]; then
+if [ "$DEVICE" = "OdroidXU3" ]; then
   PKG_MESON_OPTS_TARGET+=" -Ddri-drivers=swrast"
 fi
 

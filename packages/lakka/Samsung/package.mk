@@ -18,32 +18,19 @@
 #  http://www.gnu.org/copyleft/gpl.html
 ################################################################################
 
-PKG_NAME="xu-fan-control"
-PKG_VERSION="1"
+PKG_NAME="Samsung"
+PKG_VERSION=""
 PKG_REV="1"
 PKG_ARCH="any"
-PKG_LICENSE="GPLv3"
-PKG_SITE="https://www.hiscorebob.lu/2016/10/odroid-xu34-silent-fan-control-in-lakka-openelec/"
+PKG_LICENSE="GPL"
+PKG_SITE="https://github.com/lakkatv/Lakka"
 PKG_URL=""
-PKG_DEPENDS_TARGET=""
+PKG_DEPENDS_TARGET="retroarch $LIBRETRO_CORES xu-fan-control"
 PKG_PRIORITY="optional"
-PKG_SECTION="tools"
-PKG_SHORTDESC="Odroid-XU3 fan control"
-PKG_LONGDESC="Odroid-XU3 fan control"
+PKG_SECTION="virtual"
+PKG_SHORTDESC="Lakka metapackage for Samsung"
+PKG_LONGDESC=""
 
 PKG_IS_ADDON="no"
 PKG_AUTORECONF="no"
 
-make_target() {
-  :
-}
-
-makeinstall_target() {
-  mkdir -p $INSTALL/usr/bin/
-  cp $PKG_DIR/scripts/fan-control.sh $INSTALL/usr/bin/
-  chmod +x $INSTALL/usr/bin/fan-control.sh
-}
-
-post_install() {
-  enable_service fan-control.service
-}

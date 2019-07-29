@@ -1,0 +1,11 @@
+# SPDX-License-Identifier: GPL-2.0
+# Copyright (C) 2016-present Team LibreELEC (https://libreelec.tv)
+
+cp -av u-boot-dtb.bin $INSTALL/usr/share/bootloader
+cp -PR $PROJECT_DIR/Samsung/devices/OdroidXU3/bootloader/boot.ini $INSTALL/usr/share/bootloader/
+wget https://github.com/hardkernel/u-boot/blob/odroidxu4-v2017.05/sd_fuse/bl1.bin.hardkernel
+install -D -m 0644 bl1.bin.hardkernel $INSTALL/usr/share/bootloader/bl1
+wget https://github.com/hardkernel/u-boot/blob/odroidxu4-v2017.05/sd_fuse/bl2.bin.hardkernel.720k_uboot
+install -D -m 0644 bl2.bin.hardkernel.720k_uboot $INSTALL/usr/share/bootloader/bl2
+wget https://github.com/hardkernel/u-boot/blob/odroidxu4-v2017.05/sd_fuse/tzsw.bin.hardkernel
+install -D -m 0644 tzsw.bin.hardkernel $INSTALL/usr/share/bootloader/tzsw
